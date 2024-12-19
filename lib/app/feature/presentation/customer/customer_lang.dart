@@ -14,7 +14,7 @@ mixin CustomerLang {
   static String fill = '${_base}fill';
   static String unit = '${_base}unit';
   static String price = '${_base}price';
-  static String currency = '${_base}currency';
+  static String gender = '${_base}gender';
   static String foto = '${_base}foto';
   static String auto_generate = '${_base}auto_generate';
 
@@ -28,7 +28,7 @@ mixin CustomerLang {
     fill: 'Isi',
     unit: 'Satuan',
     price: 'Harga',
-    currency: 'Mata Uang',
+    gender: 'Jenis Kelamin',
     foto: 'Foto Pembeli',
     auto_generate: 'Otomatis dibuatkan',
     information: 'Informasi',
@@ -42,7 +42,7 @@ mixin CustomerLang {
     fill: 'Fill',
     unit: 'Unit',
     price: 'Price',
-    currency: 'Currency',
+    gender: 'Jenis Kelamin',
     foto: 'Photo Customer',
     auto_generate: 'Auto Generate',
     information: 'Information',

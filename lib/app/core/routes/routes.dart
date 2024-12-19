@@ -1,6 +1,7 @@
 import 'package:cashier_mini/app/feature/presentation/customer/customer_route.dart';
 import 'package:cashier_mini/app/feature/presentation/dashboard/dashboard_route.dart';
 import 'package:cashier_mini/app/feature/presentation/product/product_route.dart';
+import 'package:cashier_mini/app/feature/presentation/transaction/transaction_route.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -17,6 +18,7 @@ class AppRoute {
       ...DashboardRoute.routers(),
       ...ProductRoute.routers(),
       ...CustomerRoute.routers(),
+      ...TransactionRoute.routers(),
     ];
   }
 }
