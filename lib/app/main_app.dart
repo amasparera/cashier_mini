@@ -4,6 +4,7 @@ import 'package:cashier_mini/app/core/theme/theme_color.dart';
 import 'package:cashier_mini/app/feature/presentation/customer/customer_provider.dart';
 import 'package:cashier_mini/app/feature/presentation/dashboard/dashboard_provider.dart';
 import 'package:cashier_mini/app/feature/presentation/product/product_provider.dart';
+import 'package:cashier_mini/app/feature/presentation/transaction/transaction_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localization/flutter_localization.dart';
@@ -49,6 +50,7 @@ class _MainAppState extends State<MainApp> {
         ...ProductProvider.providers(context),
         ...CustomerProvider.providers(context),
         ...DashboardProvider.providers(context),
+        ...TransactionProvider.providers(context)
       ],
       child: MaterialApp.router(
         routerConfig: AppRoute.configuration,

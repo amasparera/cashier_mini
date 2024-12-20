@@ -70,7 +70,7 @@ class UICustomerAdd extends StatelessWidget {
                           initValue: state.gender,
                           items: EnumGender.values,
                           itemTitle: (p0) => p0.title,
-                          title: CustomerLang.currency.getString(context),
+                          title: CustomerLang.gender.getString(context),
                           onSelected: (value) => read.onGender(value),
                         ),
                       ],
