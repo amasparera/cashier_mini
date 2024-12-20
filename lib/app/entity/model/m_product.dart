@@ -13,7 +13,6 @@ class MProduct extends Equatable {
   final int price;
   final int fill;
   final ProductUnit unit;
-
   final AppCurrency currency;
 
   const MProduct({

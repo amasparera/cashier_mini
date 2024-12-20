@@ -35,8 +35,8 @@ class _MainAppState extends State<MainApp> {
   void initState() {
     localization.init(
       mapLocales: [
-        MapLocale('en', AppLang.EN(), fontFamily: GoogleFonts.roboto().fontFamily),
-        MapLocale('id', AppLang.ID(), fontFamily: GoogleFonts.roboto().fontFamily),
+        MapLocale('en', AppLang.EN()),
+        MapLocale('id', AppLang.ID()),
       ],
       initLanguageCode: 'id',
     );
@@ -60,13 +60,13 @@ class _MainAppState extends State<MainApp> {
         supportedLocales: localization.supportedLocales,
         localizationsDelegates: localization.localizationsDelegates,
         theme: ThemeData(
-          fontFamily: localization.fontFamily,
+          fontFamily: GoogleFonts.roboto().fontFamily,
           colorSchemeSeed: colorSelected.color,
           useMaterial3: true,
           brightness: Brightness.light,
         ),
         darkTheme: ThemeData(
-          fontFamily: localization.fontFamily,
+          fontFamily: GoogleFonts.roboto().fontFamily,
           colorSchemeSeed: colorSelected.color,
           useMaterial3: true,
           brightness: Brightness.dark,

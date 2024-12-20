@@ -1,5 +1,5 @@
-import 'package:cashier_mini/app/feature/presentation/product/product_lang.dart';
 import 'package:cashier_mini/app/feature/presentation/transaction/controller/transaction_create/c_transaction_create_cubit.dart';
+import 'package:cashier_mini/app/feature/presentation/transaction/transaction_lang.dart';
 import 'package:cashier_mini/app/feature/presentation/transaction/transaction_route.dart';
 import 'package:cashier_mini/app/other/extention/extention_export.dart';
 import 'package:cashier_mini/app/other/widget/app_counter.dart';
@@ -19,7 +19,7 @@ class UITransactionCreate extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: AppText(
-            text: ProductLang.list_title.getString(context),
+            text: TransactionLang.select_product.getString(context),
             style: AppTextStlye.titleLarge,
           ),
           actions: [AppIconButton(onPressed: () {}, icon: Icons.more_vert_rounded)],
