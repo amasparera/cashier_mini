@@ -25,6 +25,9 @@ flutter build apk --release
 ``` shell
 flutter build apk --debug
 ```
+``` shell
+flutter packages upgrade
+```
 
 
 

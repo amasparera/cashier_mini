@@ -17,17 +17,17 @@ sealed class AppException implements Exception {
 }
 
 class ServerException extends AppException {
-  ServerException({required String message, num? statusCode, String? key}) : super(message: message, key: key, statusCode: statusCode);
+  ServerException({required super.message, super.statusCode, super.key});
 }
 
 class ConnectionException extends AppException {
-  ConnectionException({required String message, num? statusCode, String? key}) : super(message: message, key: key, statusCode: statusCode);
+  ConnectionException({required super.message, super.statusCode, super.key});
 }
 
 class ClientException extends AppException {
-  ClientException({required String message, num? statusCode, String? key}) : super(message: message, key: key, statusCode: statusCode);
+  ClientException({required super.message, super.statusCode, super.key});
 }
 
 class DatabaseException extends AppException {
-  DatabaseException({required String message, num? statusCode, String? key}) : super(message: message, key: key, statusCode: statusCode);
+  DatabaseException({required super.message, super.statusCode, super.key});
 }

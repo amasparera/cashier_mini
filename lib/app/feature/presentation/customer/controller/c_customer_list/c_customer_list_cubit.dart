@@ -33,7 +33,7 @@ class CCustomerListCubit extends Cubit<CCustomerListState> {
 
   onGetData({bool isReset = false}) async {
     if (isReset) refreshController.resetNoData();
-    final res = await UsecaseGetsCustomer.call(offset: state.data.length);
+    final res = await UsecaseGetsCustomer.call(offset: isReset ? 0 : state.data.length);
     emit(state.copyWith(data: isReset ? res : [...state.data, ...res]));
 
     if (isReset) refreshController.refreshCompleted();
