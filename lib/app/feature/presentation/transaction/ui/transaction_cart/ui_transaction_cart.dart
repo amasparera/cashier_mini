@@ -26,7 +26,11 @@ class UITransactionCart extends StatelessWidget {
         body: BlocBuilder<CTransactionCartCubit, CTransactionCartState>(builder: (context, state) {
           return Column(
             children: [
-              const ListTile(title: AppText(text: "Tanpa Konsumen"), leading: Icon(Icons.person)),
+              ListTile(
+                title: AppText(text: state.customer?.name ?? "Tanpa Konsumen"),
+                leading: Icon(Icons.person),
+                onTap: () => controller.onSelectCustomer(context),
+              ),
               Expanded(
                   child: ListView(
                 children: [
@@ -40,7 +44,10 @@ class UITransactionCart extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: Const.parrentMargin, vertical: Const.margin * 3),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [AppText(text: "Total ${state.totalPriceOrder.toCurrency()}"), AppButton(title: "Selesai", onPressed: () {})],
+                  children: [
+                    AppText(text: "Total ${state.totalPriceOrder.toCurrency()}"),
+                    AppButton(title: "Selesai", onPressed: () => controller.createTransaction(context))
+                  ],
                 ),
               )
             ],

@@ -13,7 +13,7 @@ class DlProduct {
   String? idServer;
   String name;
   String? barcode;
-  int price;
+  double price;
   int fill;
 
   @enumerated

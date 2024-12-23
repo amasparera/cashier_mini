@@ -1,9 +1,13 @@
 enum AppCurrency {
-  idr,
-  dolar,
+  idr("IDR"),
+  dolar("USD"),
   ;
 
-  const AppCurrency();
+  const AppCurrency(this.value);
+  final String value;
+
+  static AppCurrency fromString(String value) => AppCurrency.values.firstWhere((e) => e.value == value);
+  
 
   String get symbol => switch (this) {
         AppCurrency.idr => 'Rp',

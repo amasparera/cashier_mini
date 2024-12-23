@@ -9,7 +9,9 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 part 'c_customer_list_state.dart';
 
 class CCustomerListCubit extends Cubit<CCustomerListState> {
-  CCustomerListCubit() : super(const CCustomerListState());
+  CCustomerListCubit() : super(const CCustomerListState()) {
+    // if (state.data.isEmpty) refreshController.requestRefresh();
+  }
 
   RefreshController refreshController = RefreshController(initialRefresh: true);
 

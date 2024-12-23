@@ -1,5 +1,6 @@
 import 'package:cashier_mini/app/feature/presentation/dashboard/ui/dashboard/ui_dashboard.dart';
 import 'package:cashier_mini/app/feature/presentation/dashboard/ui/dashboard_home/ui_dashboard_home.dart';
+import 'package:cashier_mini/app/feature/presentation/dashboard/ui/dashboard_recap/ui_dashboard_recap.dart';
 import 'package:cashier_mini/app/other/widget/widget_export.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -30,9 +31,7 @@ class DashboardRoute {
                 path: statistics,
                 parentNavigatorKey: _shellNavigatorKey,
                 builder: (BuildContext context, GoRouterState state) {
-                  return const Center(
-                    child: AppText(text: 'statis'),
-                  );
+                  return UIDashboardRecap();
                 },
               ),
               GoRoute(

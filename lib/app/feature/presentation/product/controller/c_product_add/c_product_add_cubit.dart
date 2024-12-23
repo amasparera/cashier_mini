@@ -60,7 +60,7 @@ class CProductAddCubit extends Cubit<CProductAddState> {
       barcode: state.barcode,
       currency: state.currencyType!,
       name: textName.text,
-      price: int.tryParse(textPrice.text.replaceAll('.', '')) ?? 0,
+      price: double.tryParse(textPrice.text.replaceAll('.', '')) ?? 0,
       unit: state.unit!,
     );
 
@@ -79,7 +79,7 @@ class CProductAddCubit extends Cubit<CProductAddState> {
       barcode: state.barcode,
       currency: state.currencyType!,
       name: textName.text,
-      price: int.tryParse(textPrice.text.replaceAll('.', '')) ?? 0,
+      price: double.tryParse(textPrice.text.replaceAll('.', '')) ?? 0,
       unit: state.unit!,
     );
 

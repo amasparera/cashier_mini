@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:cashier_mini/app/entity/database_local/transaction/dl_transaction.dart';
 import 'package:equatable/equatable.dart';
 
 import 'package:cashier_mini/app/entity/database_local/customer/dl_customer.dart';
@@ -57,6 +58,17 @@ class MCustomer extends Equatable {
       gender: gender,
       phone: phone,
       id: idLocal,
+      idServer: idServer,
+      name: name,
+    );
+  }
+
+  DlTransactionCustomer toDlTransactionCustomer() {
+    return DlTransactionCustomer(
+      addess: addess,
+      gender: gender.value,
+      phone: phone,
+      idLocal: idLocal?.toString(),
       idServer: idServer,
       name: name,
     );

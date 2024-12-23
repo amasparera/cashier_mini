@@ -14,7 +14,9 @@ class CustomerRoute {
         GoRoute(
           path: list,
           builder: (BuildContext context, GoRouterState state) {
-            return const UICustomerList();
+            return UICustomerList(
+              onSelect: state.extra as ValueChanged<dynamic>?,
+            );
           },
         ),
         GoRoute(
@@ -25,8 +27,8 @@ class CustomerRoute {
         ),
       ];
 
-  static toList(BuildContext context) async {
-    return context.push(list);
+  static toList(BuildContext context, {ValueChanged? onSelect}) async {
+    return context.push(list, extra: onSelect);
   }
 
   static toAdd(BuildContext context, ValueChanged<MCustomer> onUpdate) async {

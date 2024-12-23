@@ -4,7 +4,7 @@ import 'package:isar/isar.dart';
 part 'dl_transaction.g.dart';
 
 @collection
-class MTransaction {
+class DlTransaction {
   Id? id;
   double? amount;
   double? totalPrice;
@@ -12,7 +12,7 @@ class MTransaction {
   DlTransactionCustomer? customer;
   List<DlTransactionData> data;
 
-  MTransaction({
+  DlTransaction({
     this.id,
     this.amount,
     this.totalPrice,
@@ -33,6 +33,25 @@ class DlTransactionCustomer {
 
   DlTransactionCustomer({
     this.idServer,
+    this.idLocal,
+    this.name,
+    this.phone,
+    this.addess,
+    this.gender,
+  });
+}
+@embedded
+class DlTransactionSuplayer {
+  String? idLocal;
+  String? idServer;
+  String? name;
+  String? phone;
+  String? addess;
+  String? gender;
+
+  DlTransactionSuplayer({
+    this.idServer,
+    this.idLocal,
     this.name,
     this.phone,
     this.addess,
@@ -43,9 +62,10 @@ class DlTransactionCustomer {
 @embedded
 class DlTransactionData {
   String? idServer;
+  String? idLocal;
   String? name;
   String? barcode;
-  int? price;
+  double? price;
   int? fill;
   double? totalPrice;
   int? qty;
@@ -54,6 +74,7 @@ class DlTransactionData {
 
   DlTransactionData({
     this.idServer,
+    this.idLocal,
     this.name,
     this.barcode,
     this.price,

@@ -23,9 +23,9 @@ class UIDashboard extends StatelessWidget {
       ),
       NavigationDestination(
         tooltip: '',
-        icon: Icon(Icons.person_4_outlined),
-        label: 'Account',
-        selectedIcon: Icon(Icons.person_4),
+        icon: Icon(Icons.wallet_outlined),
+        label: 'Statistik',
+        selectedIcon: Icon(Icons.wallet),
       )
     ];
     return Scaffold(

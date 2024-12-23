@@ -24,7 +24,7 @@ class MTransactionData extends MProduct {
     String? idServer,
     String? name,
     String? barcode,
-    int? price,
+    double? price,
     int? fill,
     double? totalPrice,
     int? qty,

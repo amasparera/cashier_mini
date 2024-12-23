@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:cashier_mini/app/entity/database_local/transaction/dl_transaction.dart';
 import 'package:equatable/equatable.dart';
 
 import 'package:cashier_mini/app/entity/database_local/product/dl_product.dart';
@@ -10,7 +11,7 @@ class MProduct extends Equatable {
   final String? idServer;
   final String name;
   final String? barcode;
-  final int price;
+  final double price;
   final int fill;
   final ProductUnit unit;
   final AppCurrency currency;
@@ -45,7 +46,7 @@ class MProduct extends Equatable {
     String? idServer,
     String? name,
     String? barcode,
-    int? price,
+    double? price,
     int? fill,
     ProductUnit? unit,
     AppCurrency? currency,
@@ -71,6 +72,19 @@ class MProduct extends Equatable {
       name: name,
       price: price,
       unit: unit,
+      fill: fill,
+    );
+  }
+
+   DlTransactionData toDlTransactionData() {
+    return DlTransactionData(
+      idLocal: idLocal.toString(),
+      idServer: idServer,
+      barcode: barcode,
+      currency: currency.value,
+      name: name,
+      price: price,
+      unit: unit.value,
       fill: fill,
     );
   }

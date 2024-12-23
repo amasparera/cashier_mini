@@ -17,7 +17,6 @@ class CTransactionCreateCubit extends Cubit<CTransactionCreateState> {
   }
 
   onAddCart(BuildContext context, int index, int count) {
-    print(count);
     Map<MProduct, int> data = Map.from(state.order);
     data[state.data[index]] = count;
     emit(state.copyWith(order: data));
